@@ -27,14 +27,14 @@ The images that will go into convnet are 150x150 color images on Data Preprocess
 ## Standard HyperParameters
 
 ```
-**Conv Layers**: 3 Layers
-**Filter Size**: 3
-**Epochs**: 5
-**L2 Regularisation**: 0 (REMOVE)
-**Dropout**: 0 (REMOVE)
-**Batch**: size 16
-**Optimizer**: adam
-**Loss**: Categorical crossentropy
+Conv Layers: 3 Layers
+Filter Size: 3
+Epochs: 5
+L2 Regularisation: 0 (REMOVE)
+Dropout: 0 (REMOVE)
+Batch: size 16
+Optimizer: adam
+Loss: Categorical crossentropy
 ```
 ## Model Architecture
 
