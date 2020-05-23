@@ -8,14 +8,16 @@ Object classification is a critical task in computer vision applications. It is 
 In this project, the classification model of furniture (5 classes) is built using Convolutional Neural Networks (CNN).
 
 ## About Dataset
-```
-Name: Furniture-images
-Training set: 4024 images
-Testing set: 423 images
-Image size: Varying from (96 x 96) to (450 x 450)
-No. of Classes 5 classes: chair, sofa, table, swivel-chair, bed
-Dataset: [Click Here](https://drive.google.com/drive/folders/10Uqr_lQUgamXQs5Z43PKwwuCRx6hG52b?usp=sharing)
-```
+
+Details | - 
+--- | --- 
+**Name** | Furniture-images
+**Training set** | 4024 images
+**Testing set** | 423 images
+**Image size** | Varying from (96 x 96) to (450 x 450)
+**No. of Classes 5 classes** | chair, sofa, table, swivel-chair, bed
+**Dataset** | [Click Here](https://drive.google.com/drive/folders/10Uqr_lQUgamXQs5Z43PKwwuCRx6hG52b?usp=sharing)
+
 
 ## Implementation
 
@@ -26,49 +28,77 @@ The images that will go into convnet are 150x150 color images on Data Preprocess
 
 ## Standard HyperParameters
 
-```
-Conv Layers: 3 Layers
-Filter Size: 3
-Epochs: 5
-L2 Regularisation: 0 (REMOVE)
-Dropout: 0 (REMOVE)
-Batch: size 16
-Optimizer: adam
-Loss: Categorical crossentropy
-```
+
+HyperParameters | - 
+--- | --- 
+**Conv Layers** | 3 Layers
+**Filter Size** | 3
+**Epochs** | 5
+**L2 Regularisation** | 0 (REMOVE)
+**Dropout** | 0 (REMOVE)
+**Batch** | size 16
+**Optimizer** | adam
+**Loss** | Categorical crossentropy
+
+
 ## Model Architecture
 
-[View Image]()
+![alt text](https://raw.githubusercontent.com/pragati21p/Object-Recognition-in-Deep-Learning/master/model_plot.png "Model") 
 
 
 ## Result
 
-Standard results are the results removing all the additional hypermeters (consider standard hyperparameters) 
-**Graph between the Accuracies and Epochs**
+Standard results are the results removing all the additional hypermeters (consider standard hyperparameters)  
+**Graph between the Accuracies and Epochs**  
+
+![alt text](https://raw.githubusercontent.com/pragati21p/Object-Recognition-in-Deep-Learning/master/images/standard_results.png "Analysis Graph")  
 
 ## Analysis
 
-By changing the hyperparameters of the model, we can see the changes in the results and analyse for the better model. However, changes may have different effects on different datasets and hence it must be chosen carefully. The accuracy tweaks with epochs are shown below as per the changes made. Other hyperparameters in each comparison are standard parameters of the model.
-● Number of convolutional layers
-○ More - (5)
+By changing the hyperparameters of the model, we can see the changes in the results and analyse for the better model. However, changes may have different effects on different datasets and hence it must be chosen carefully. The accuracy tweaks with epochs are shown below as per the changes made. Other hyperparameters in each comparison are standard parameters of the model.  
+  
+#### Number of convolutional layers  
+  
+○ 5 layers  
+  
+![alt text](https://raw.githubusercontent.com/pragati21p/Object-Recognition-in-Deep-Learning/master/images/convolutional_layer_more.png "Analysis Graph")  
+  
+○ 2 layers    
+  
+![alt text](https://raw.githubusercontent.com/pragati21p/Object-Recognition-in-Deep-Learning/master/images/convolutional_layer_less.png "Analysis Graph")  
+  
+#### L2 Regularization  
+  
+○ Add - L2 regularization of 0.01 is added in first 2 hidden layers in the model. 
+  
+![alt text](https://raw.githubusercontent.com/pragati21p/Object-Recognition-in-Deep-Learning/master/images/l2_add.png "Analysis Graph")   
+○ Remove  
+  
+![alt text](https://raw.githubusercontent.com/pragati21p/Object-Recognition-in-Deep-Learning/master/images/standard_results.png "Analysis Graph")  
 
 
-○ Less - (2)
-● L2 Regularization
-○ Add - L2 regularization of 0.01 is added in first 2 hidden layers in the model.
-○ Remove
-
-
-● Dropout
-○ Add - 0.2 dropout is added between input layer and first hidden layer.
-○ Remove
-● Filter / Kernel size
-○ Filter size - 6
-
-
-○ Filter size - 3
-From the above results, we can analyse that adding or removing L2 regularization, changing the layer count or change in filter is not making much changes in the last epoch. Accuracies are in the range [0.83, 0.89]. Although adding dropout of 0.2 is increasing the train accuracy of the model up to 0.945 and validation accuracy up to 0.885 in last epoch.
-
+#### Dropout  
+  
+○ Add - 0.2 dropout is added between input layer and first hidden layer.  
+  
+![alt text](https://raw.githubusercontent.com/pragati21p/Object-Recognition-in-Deep-Learning/master/images/dropout_add.png "Analysis Graph")  
+  
+○ Remove  
+  
+![alt text](https://raw.githubusercontent.com/pragati21p/Object-Recognition-in-Deep-Learning/master/images/standard_results.png "Analysis Graph")  
+  
+#### Filter / Kernel size  
+  
+○ Filter size - 6  
+  
+![alt text](https://raw.githubusercontent.com/pragati21p/Object-Recognition-in-Deep-Learning/master/images/filter_6.png "Analysis Graph")  
+  
+○ Filter size - 3  
+  
+![alt text](https://raw.githubusercontent.com/pragati21p/Object-Recognition-in-Deep-Learning/master/images/standard_results.png "Analysis Graph")  
+  
+From the above results, we can analyse that adding or removing L2 regularization, changing the layer count or change in filter is not making much changes in the last epoch. Accuracies are in the range [0.83, 0.89]. Although adding dropout of 0.2 is increasing the train accuracy of the model up to 0.945 and validation accuracy up to 0.885 in last epoch.  
+  
 ## References
 
 * Deep Learning Tutorial | deeplearning.ai
