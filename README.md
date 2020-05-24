@@ -101,7 +101,7 @@ From the above results, we can analyse that adding or removing L2 regularization
   
 ## References
 
-* Deep Learning Tutorial | deeplearning.ai
-* A friendly introduction to CNN
-* CNN Tutorial | SimpliLearn
-* Understanding Neural Networks | Towards Data Science
+* [Deep Learning Tutorial | deeplearning.ai](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF)
+* [A friendly introduction to CNN](https://www.youtube.com/watch?v=2-Ol7ZB0MmU)
+* [CNN Tutorial | SimpliLearn](https://www.youtube.com/watch?v=Jy9-aGMB_TE)
+* [Understanding Neural Networks | Towards Data Science](https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90)
