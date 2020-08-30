@@ -23,7 +23,7 @@ Details | -
 
 The model starts with downloading the dataset from the drive followed by importing related libraries which include TensorFlow Keras, NumPy, matplotlib.pyplot and some more.
 
-## Build the Model
+### Build the Model
 The images that will go into convnet are 150x150 color images on Data Preprocessing, we'll add handling to resize all the images to 150x150 before feeding them into the neural network). We will stack 3 {convolution + relu + maxpooling} modules. Our convolutions operate on 3x3 windows and our maxpooling layers operate on 2x2 windows. Our first convolution extracts 16 filters, the following one extracts 32 filters, and the last one extracts 64 filters. Before the output layer, two fully connected layers are added. The output layer is using softmax activation to classify images.
 
 ## Standard HyperParameters
